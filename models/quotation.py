@@ -20,6 +20,7 @@ class SaleOrderLine(models.Model):
         for order in self:
             products_in_lines = order.mapped('order_line.product_id')
             list = []
+            name=''
             duplicate_product = False
             for product in products_in_lines:
                 print("product",product.name)
