@@ -19,7 +19,7 @@ class SaleOrderLine(models.Model):
     def _check_exist_product_in_line(self):
         for order in self:
             products_in_lines = order.mapped('order_line.product_id')
-            list = []
+            
             name=''
             duplicate_product = False
             for product in products_in_lines:
